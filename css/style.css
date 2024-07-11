@@ -1,1 +1,6 @@
 
+*{
+ ::selection{
+    background-color: #bb9f5d;
+ }   
+}

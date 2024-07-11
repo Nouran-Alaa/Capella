@@ -1,59 +1,126 @@
 /* Contact Page */
-*{
+* {
   box-sizing: border-box;
+  margin: 0;
+  color: black;
 }
+
 .about-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Images/photodune-5087439-chicken-tagine-m.jpg');
-    background-size: cover;
-    background-position: center center;
-    height: 400px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Images/photodune-5087439-chicken-tagine-m.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-    font-size: 70px;
-    color: white;
-    font-family: "Yellowtail", cursive;
-    font-weight: 400;
+  font-size: 70px;
+  color: white;
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
 }
-main{
+
+main {
   font-family: "Montserrat", sans-serif;
 }
-.img-about{
+
+.img-about {
   width: 90%;
 }
+
 .max-width {
-  max-width: 550px;}
-.zoom img {
-    transition: all .4s ease 0s;
+  max-width: 550px;
 }
+
+.zoom img {
+  transition: all .4s ease 0s;
+}
+
 .zoom:hover img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
 /* our-chef */
-.our-chef-bg{
+.our-chef-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Images/bg-about.jpg');
   background-size: cover;
   background-position: center center;
- padding: 30px 0;
+  padding: 30px 0;
   width: 100%;
 
 }
-.chef-header{
+
+.chef-header {
   margin-top: 30px;
   text-align: center;
   color: white;
 }
+
 .chef-header h2 {
   font-size: 70px;
   color: white;
   font-family: "Yellowtail", cursive;
   font-weight: 400;
 }
-.chef-profile{
+
+.chef-container {
+  padding: 15px;
+}
+
+.chef-profile {
   background-color: white;
+}
+
+.chef-profile h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.chef-position {
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.chef-info {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.follow {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chef-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.chef-social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: all 0.4s;
+}
+.chef-social i{
+  cursor: pointer;
+}
+.chef-image {
+  transition: all 0.4s 
+}
+.chef-image-container:hover .chef-image {
+  transform: translateY(-10%);
+}
+.chef-image-container:hover .chef-social {
+  transform: translateY(0);
 }
