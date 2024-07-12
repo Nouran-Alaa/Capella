@@ -1,10 +1,7 @@
-* {
-    margin: 0;
-}
 
 /* Contact Page */
 .contact-bg {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Images/photodune-5513023-black-spaghetti-with-seafood-m.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Images/resrv1.jpg');
     background-size: cover;
     background-position: center center;
     height: 400px;
@@ -22,4 +19,77 @@
 }
 main{
   font-family: "Montserrat", sans-serif;
+  color: #000;
 }
+h4{
+    font-size: 22px;
+    font-weight: 800px;
+    position: relative;
+    margin-bottom: 20px;
+}
+h4::after{
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 15%;
+  height: 2px;
+  background-color: #010101;
+}
+p{
+    font-size: 14px;
+    max-width: 550px;
+    font-weight: 400;
+    margin: 0;
+}
+.form-control:focus, .form-select:focus {
+    border: 0;
+    box-shadow: 0 0 0 .25rem rgba(16, 17, 19, 0.25);
+}
+.btn-dark {
+    box-shadow: 0 0 0 .25rem rgb(255, 255, 255);
+    border: #000;
+    /* transition: all 0.3s; */
+}
+.btn-dark:hover , .btn-dark:focus {
+    background-color: white !important;
+    color: #000;
+    border: #000;
+    box-shadow: 0 0 0 .25rem rgba(16, 17, 19, 0.25);
+}
+.contact-details{
+    border: #010101 2px solid;
+    height: 100%;
+}
+h6{
+    margin-bottom: 20px;
+}
+.details{
+    border-bottom: #777 solid 1px;
+    line-height: 25px;
+}
+.icon-holder{
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    margin:0 2px 8px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+.icon-holder-f:hover{
+    background: #4c66a4;
+}
+.icon-holder-x:hover{
+    background: #3cf;
+}
+
+.icon-holder-youtube:hover{
+    background: #cc181e;
+}
+.icon-holder-pinterest:hover{
+    background: #4c66a4;
+}
+

@@ -20,74 +20,93 @@
     <header class="contact-bg">
         <h1>Contact Us</h1>
     </header>
-    <main>
-        <section>
-            <h4>We’d Love to Hear From You, Please Let Us Know</h4>
-            <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur Nulla fringilla
-                purus at leo dignissim congue. Mauris elementum accumsan leo vel tempor. Sit amet cursus nisl aliquam.
-                Aliquam et elit eu nunc rhoncus viverra quis at felis.</p>
-            <br>
-            <form>
-                <label for="name">Name*</label>
-                </br>
-                <input type="text" name="name" id="name">
-                </br>
-                <label for="email">Email*</label>
-                </br>
-                <input type="email" name="email" id="email">
-                </br>
-                <label for="subject">Subject:</label>
-                <select id="subject" name="subject" required>
-                    <option value="feedback">Feedback</option>
-                    <option value="complaint">Complaint</option>
-                    <option value="inquiry">Inquiry</option>
-                </select>
-                </br>
-                <label for="message">Message*</label>
-                </br>
+    <main class="my-5">
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <!-- form -->
+                <div class="col-lg-6 col-md-8">
+                    <section>
+                        <h4>We’d Love to Hear From You, Please Let Us Know</h4>
+                        </br>
+                        <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur Nulla
+                            fringilla
+                            purus at leo dignissim congue. Mauris elementum accumsan leo vel tempor. Sit amet cursus
+                            nisl aliquam.
+                            Aliquam et elit eu nunc rhoncus viverra quis at felis.</p>
+                        <br>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name*</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email*</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
 
-                <textarea name="message" id="message" cols="" rows="8"></textarea>
-                </br>
-                <button type="submit">Send</button>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" aria-label="Default select example">
+                                    <option value="feedback">Feedback</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="inquiry">Inquiry</option>
+                                </select>
+                            </div>
 
-            </form>
-        </section>
+                            <div class="mb-3">
+                                <label for="message" class="form-label d-block">Message</label>
+                                <textarea name="message" class="w-100 form-control" id="message" rows="5"></textarea>
+                            </div>
+                            <div class=" text-end mt-4 me-auto">
+                                <button type="submit" class="btn btn-dark bg-black  px-5 py-2">Send</button>
+                            </div>
+                        </form>
 
-        <section>
-            <div>
-                <h6>ADDRESS</h6>
-                <p> <i class="fa-solid fa-location-dot"></i> 732/21 Second Street, Manchester, King Street, Kingston
-                    United Kingdom</p>
-            </div>
 
-            <div>
-                <h6>OPEN HOURS</h6>
-                <p> <i class="fa-regular fa-clock"></i> Monday – Friday
-                    10 AM – 7 PM</p>
-                <p><i class="fa-regular fas fa-phone"></i>+66 233459876</p>
-            </div>
 
-            <div>
-                <h6>FIND US ON</h6>
-                <div class="d-flex">
-                    <div><i class="fa-brand fas fab fab fa-facebook-f"></i></div>
-                    <div><i class="fa-brands fa-x-twitter" style="color: #000000;"></i></div>
-                    <div><i class="fa-brands fa-youtube"></i></div>
-                    <div><i class="fa-brand fas fab fab fab fa-tiktok"></i></div>
-                    <div><i class="fa-brand fas fab fab fab fa-pinterest"></i></div>
+                    </section>
+                </div>
+                <!-- contact details -->
+                <div class="col-lg-2 col-md-4 border mx-lg-5 p-2">
+                    <section class="p-4 contact-details  ">
+                        <div class=" details py-4 ">
+                            <h6 class="text-center" >ADDRESS</h6>
+                            <p> <i class="fa-solid fa-location-dot"></i> 732/21 Second Street, Manchester, King Street,
+                                Kingston
+                                United Kingdom</p>
+                        </div>
+
+                        <div class=" details py-4  ">
+                            <h6 class="text-center">OPEN HOURS</h6>
+                            <p> <i class="fa-regular fa-clock"></i> Monday – Friday
+                                10 AM – 7 PM</p>
+                            <p><i class="fa-regular fas fa-phone"></i>+66 233459876</p>
+                        </div>
+
+                        <div class=" details py-4 ">
+                            <h6 class="text-center">FIND US ON</h6>
+                            <div class="d-flex flex-wrap justify-content-center ">
+                                <div class="icon-holder icon-holder-f"><i class="fa-brand  fas fab fab fa-facebook-f"></i></div>
+                                <div class="icon-holder icon-holder-x"><i class="fa-brands  fa-x-twitter" ></i></div>
+                                <div class="icon-holder icon-holder-youtube"><i class="fa-brands  fa-youtube"></i></div>
+                                <div class="icon-holder icon-holder-tiktok"><i class="fa-brand  fas fab fab fab fa-tiktok"></i></div>
+                                <div class="icon-holder icon-holder-pinterest"><i class="fa-brand  fas fab fab fab fa-pinterest"></i></div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </section>
-
-
-
-
+        </div>
     </main>
 
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.6023510908553!2d-0.15738907616377265!3d51.502164311086325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876053998f43547%3A0x60f3fd42f231a0fa!2sDinner%20by%20Heston%20Blumenthal!5e0!3m2!1sar!2seg!4v1720642915246!5m2!1sar!2seg"
-        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <!-- map -->
+      <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.6023510908553!2d-0.15738907616377265!3d51.502164311086325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876053998f43547%3A0x60f3fd42f231a0fa!2sDinner%20by%20Heston%20Blumenthal!5e0!3m2!1sar!2seg!4v1720642915246!5m2!1sar!2seg"
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
     <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
