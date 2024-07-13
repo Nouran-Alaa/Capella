@@ -22,10 +22,10 @@ h1 {
   font-family: "Yellowtail", cursive;
   font-weight: 400;
 }
-h2{
+.h2-border{
   position: relative;
 }
-h2::after{
+.h2-border::after{
   content: "";
   position: absolute;
   bottom: -10px;
