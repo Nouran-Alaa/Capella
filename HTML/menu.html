@@ -3,6 +3,7 @@
 
 <head>
     <title>Menu</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/menu-login.css" />
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -13,48 +14,35 @@
 </head>
 
 <body style="margin: 0px;">
-    <header class="header" id="sliderHeader">
-        <!-- NAV -->
-        <nav class="navbar" id="navbar">
-            <a href="#" class="brand"><img src="/Images/logo-white.png" class="logo-img" id="logo-img" /></a>
-            <!-- NAV BAR -->
-            <ul class="nav-links">
-                <li><a class="nav-link" href="../index.html">Home</a></li>
-                <li><a class="nav-link" href="./menu.html">Menu</a></li>
-                <li><a class="nav-link" href="./about.html">About</a></li>
-                <li><a class="nav-link" href="./contact.html">Contact</a></li>
-                <li><a class="nav-link" href="./order.html">Order</a></li>
-                <li>
-                    <a class="nav-link" href="./register.html">Registration</a>
-                </li>
-                <li><a class="nav-link" href="./login.html">Login</a></li>
-            </ul>
-            <!-- BURGER MENU ICON -->
-            <div class="burger" id="burger" onclick="toggleMenu()">
-                <div class="line line1"></div>
-                <div class="line line2"></div>
-                <div class="line line3"></div>
-            </div>
-        </nav>
-        <!-- BURGER MENU -->
-        <div class="mobile-menu" id="mobile-menu">
-            <div class="close-btn" onclick="toggleMenu()">&times;</div>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./menu.html">Menu</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./order.html">Order</a></li>
-                <li><a href="./register.html">Registration</a></li>
-                <li><a href="./login.html">Login</a></li>
-            </ul>
+      <!-- NAV -->
+      <nav class="navbar " id="navbar">
+        <a href="#" class="brand"
+          ><img src="../Images/logo-white.png" class="logo-img" id="logo-img"
+        /></a>
+        <!-- NAV BAR -->
+        <ul class="nav-links">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="menu.html">Menu</a></li>
+          <li><a class="nav-link" href="about.html">About </a></li>
+          <li><a class="nav-link" href="contact.html">Contact </a></li>
+          <li><a class="nav-link" href="order.html">Order</a></li>
+          <li>
+            <a class="nav-link" href="register.html">Registration</a>
+          </li>
+          <li><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+        <!-- BURGER MENU ICON -->
+        <div class="burger" id="burger" onclick="toggleMenu()">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
         </div>
-    </header>
+      </nav>
 
     <div class="parallax">
-        <div id="menu">
+        <div id="menu" >
 
-            <div class="first">
+            <div class="first d-flex align-items-center">
                 <h1>Chef Recommended</h1>
                 <h2>SIGNATURE DISHES RECOMMENDED BY OUR CHEF</h2>
             </div>
@@ -219,7 +207,7 @@
     </footer>
     </main>
     <!-- Script -->
-    <script src="../Javascript/main.js" defer></script>
+    <script src="../main.js" defer></script>
     <script src="https://kit.fontawesome.com/1c758ec64d.js" crossorigin="anonymous"></script>
 </body>
 

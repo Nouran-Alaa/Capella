@@ -12,12 +12,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .parallax2 {
     background-image: url("https://themes.themegoods.com/capella/demo/wp-content/uploads/2014/05/shutterstock_178075700.jpg");
-    min-height: 500px;
-    height: 100%;
+    /* min-height: 500px; */
+    /* height: 100%; */
     width: 100%;
     background-attachment: fixed;
     background-position: center;

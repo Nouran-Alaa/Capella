@@ -3,8 +3,9 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="../css/menu-login.css" />
-    <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/nav.css">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap"
@@ -19,45 +20,33 @@
 </head>
 
 <body>
+    
     <div class="parallax2">
         <header class="header" id="sliderHeader">
             <!-- NAV -->
-            <nav class="navbar" id="navbar">
-                <a href="#" class="brand"><img src="/Images/logo-white.png" class="logo-img" id="logo-img" /></a>
-                <!-- NAV BAR -->
-                <ul class="nav-links">
-                <li><a class="nav-link" href="../index.html">Home</a></li>
-                <li><a class="nav-link" href="./menu.html">Menu</a></li>
-                <li><a class="nav-link" href="./about.html">About</a></li>
-                <li><a class="nav-link" href="./contact.html">Contact</a></li>
-                <li><a class="nav-link" href="./order.html">Order</a></li>
-                <li>
-                    <a class="nav-link" href="./register.html">Registration</a>
-                </li>
-                <li><a class="nav-link" href="./login.html">Login</a></li>
-                </ul>
-                <!-- BURGER MENU ICON -->
-                <div class="burger" id="burger" onclick="toggleMenu()">
-                    <div class="line line1"></div>
-                    <div class="line line2"></div>
-                    <div class="line line3"></div>
-                </div>
-            </nav>
-            <!-- BURGER MENU -->
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="close-btn" onclick="toggleMenu()">&times;</div>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./order.html">Order</a></li>
-                    <li><a href="./register.html">Registration</a></li>
-                    <li><a href="./login.html">Login</a></li>
-                </ul>
-            </div>
+    <nav class="navbar container  p-5" id="navbar">
+        <a href="#" class="brand"><img src="../Images/logo-white.png" class="logo-img" id="logo-img" /></a>
+        <!-- NAV BAR -->
+        <ul class="nav-links">
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li><a class="nav-link" href="menu.html">Menu</a></li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+            <li><a class="nav-link" href="order.html">Order</a></li>
+            <li>
+                <a class="nav-link" href="register.html">Registration</a>
+            </li>
+            <li><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+        <!-- BURGER MENU ICON -->
+        <div class="burger" id="burger" onclick="toggleMenu()">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </nav>
         </header>
-        <div class="container">
+        <div class="container pb-5">
             <div class="row">
                 <div class="col-md-5 mx-auto">
                     <div id="first">
@@ -226,7 +215,7 @@
         </div>
     </footer>
     </main>
-    <script src="../Javascript/main.js" defer></script>
+    <script src="../main.js" defer></script>
     <script src="https://kit.fontawesome.com/1c758ec64d.js" crossorigin="anonymous"></script>
 </body>
 
