@@ -2,7 +2,9 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  color: black;
+}
+.nav-links li a{
+font-size: 14px;
 }
 
 .about-bg {
@@ -37,6 +39,8 @@ h1 {
 }
 main {
   font-family: "Montserrat", sans-serif;
+  color: black;
+
 }
 
 .img-about {
@@ -135,4 +139,15 @@ main {
 }
 .chef-image-container:hover .chef-social {
   transform: translateY(0);
+}
+.footer-top span{
+  font-size: 16px;
+  font-weight: bold;
+  padding: 25px 0;
+}
+.nav-links li a{
+  font-size: 14px;
+  }
+footer p{
+  font-size: 14px !important;
 }

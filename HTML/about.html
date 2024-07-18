@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +18,30 @@
         rel="stylesheet">
 
 <body>
+     <!-- NAV -->
+     <nav class="navbar " id="navbar">
+        <a href="#" class="brand"
+          ><img src="../Images/logo-white.png" class="logo-img" id="logo-img"
+        /></a>
+        <!-- NAV BAR -->
+        <ul class="nav-links">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="menu.html">Menu</a></li>
+          <li><a class="nav-link" href="about.html">About </a></li>
+          <li><a class="nav-link" href="contact.html">Contact </a></li>
+          <li><a class="nav-link" href="order.html">Order</a></li>
+          <li>
+            <a class="nav-link" href="register.html">Registration</a>
+          </li>
+          <li><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+        <!-- BURGER MENU ICON -->
+        <div class="burger" id="burger" onclick="toggleMenu()">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+      </nav>
     <!-- Header -->
     <header class="about-bg mb-5">
         <h1>About Us</h1>
@@ -149,7 +175,84 @@
 
         </section>
     </main>
+      
+         <!-- FOOTER  -->
+    <footer class="text-white">
+        <div class="footer-top  m-0 d-flex align-items-center justify-content-center p-3">
+            <span>
+                Experience the finest dining with our gourmet dishes and exceptional service.
+            </span>
+        </div>
+        <div class="footer-content">
+            <div class="footer-wrapper">
+                <!-- FOOTER LEFT -->
+                <div class="footer-left">
+                    <img src="../Images/image.png" alt="food ad" loading="lazy" />
+                </div>
+                <!-- FOOTER CENTER -->
+                <div class="footer-center">
+                    <h3 class="footer-text">ADDRESS</h3>
+                    <div class="icon-wrapper">
+                        <p class="footer-paragraph">
+                            <i class="fa-solid fa-location-dot" style="color: #ffffff"></i>
+                            732/21 Second Street, Manchester, King Street, Kingston United
+                            Kingdom
+                        </p>
+                    </div>
 
+                    <h3 class="footer-text">FIND US ON</h3>
+                    <div class="social-media">
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-facebook-f fa-lg" style="color: #ffffff"></i>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-twitter fa-lg" style="color: #ffffff"></i>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-youtube fa-lg" style="color: #ffffff"></i>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-vimeo-v fa-lg" style="color: #ffffff"></i>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-pinterest-p fa-lg" style="color: #ffffff"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- FOOTER RIGHT -->
+                <div class="footer-right">
+                    <h3 class="footer-text">OPEN HOURS</h3>
+                    <div class="icon-wrapper">
+                        <p class="footer-paragraph">
+                            <i class=" fa-regular fa-clock"></i>
+                            Monday – Friday<br />10 AM – 7 PM
+                        </p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <i class=" fa-solid fa-phone"></i>
+                        <p class="footer-paragraph">+66 7883456</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <i class=" fa-solid fa-phone"></i>
+                        <p class="footer-paragraph">+66 7883456</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" >
+            <p class="m-auto py-2">&copy; Copyright Team 4 | Sprints All Right Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Our Chef</a>
+                <a href="#">Reservation</a>
+                <a href="#">Shop</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../main.js" defer></script>
+    <script
+    src="https://kit.fontawesome.com/1c758ec64d.js"
+    crossorigin="anonymous"
+  ></script>
 </body>
 
 </html>
