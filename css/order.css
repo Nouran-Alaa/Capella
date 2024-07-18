@@ -29,12 +29,6 @@ del {
   font-size: 15px;
 }
 
-.header {
-  position: relative;
-  color: white;
-  overflow: hidden;
-}
-
 .footer-top span {
   font-size: 16px;
   font-weight: bold;
