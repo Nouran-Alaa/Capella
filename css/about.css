@@ -22,7 +22,18 @@ h1 {
   font-family: "Yellowtail", cursive;
   font-weight: 400;
 }
-
+.h2-border{
+  position: relative;
+}
+.h2-border::after{
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 15%;
+  height: 2px;
+  background-color: #010101;
+}
 main {
   font-family: "Montserrat", sans-serif;
 }
