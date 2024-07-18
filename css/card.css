@@ -1,0 +1,128 @@
+.card {
+  border: 3px solid white;
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 px 2px rgb(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.front-lower {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #000;
+}
+.front-lower div h3 {
+  font-size: 1.7rem;
+}
+.front-lower div h5 {
+  margin-bottom: 2rem;
+
+  font-weight: 300;
+  font-size: 1.05rem;
+}
+.front-lower p {
+  font-size: 1.15rem;
+}
+
+.back {
+  background-color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+.back h3 {
+  color: black;
+  font-size: large;
+}
+.chef-socials {
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 5rem;
+}
+
+.profiles {
+  margin: 7rem 0;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.chef-profile {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chef-image-container {
+  width: 90%;
+  height: 55%;
+}
+
+.chef-image {
+  border-radius: 1rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 983px) {
+  .profiles {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .content-typo-container h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .content-typo-container h1 {
+    font-size: 7rem;
+  }
+  .card {
+    height: 500px;
+  }
+}
