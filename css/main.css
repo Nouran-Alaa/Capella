@@ -3,16 +3,16 @@
     font-family--primary = "Yellowtail", cursive;
     font-family--secondary = Montserrat", sans-serif;
 */
-@import url("./nav.css");
-@import url("./slider.css");
-@import url("./parallax.css");
-@import url("./content-section.css");
-@import url("./about-section.css");
-@import url("./recommendation-section.css");
-@import url("./menu-section.css");
-@import url("./ingredients-section.css");
-@import url("./card.css");
-@import url("./footer.css");
+@import url("nav.css");
+@import url("slider.css");
+@import url("parallax.css");
+@import url("content-section.css");
+@import url("about-section.css");
+@import url("recommendation-section.css");
+@import url("menu-section.css");
+@import url("ingredients-section.css");
+@import url("card.css");
+@import url("footer.css");
 
 *,
 :root {

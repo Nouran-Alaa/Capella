@@ -6,7 +6,8 @@
 }
 
 .about-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Images/photodune-5087439-chicken-tagine-m.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../Images/photodune-5087439-chicken-tagine-m.jpg");
   background-size: cover;
   background-position: center center;
   height: 400px;
@@ -22,10 +23,10 @@ h1 {
   font-family: "Yellowtail", cursive;
   font-weight: 400;
 }
-.h2-border{
+.h2-border {
   position: relative;
 }
-.h2-border::after{
+.h2-border::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -47,7 +48,7 @@ main {
 }
 
 .zoom img {
-  transition: all .4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .zoom:hover img {
@@ -57,12 +58,12 @@ main {
 
 /* our-chef */
 .our-chef-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Images/bg-about.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../Images/bg-about.jpg");
   background-size: cover;
   background-position: center center;
   padding: 30px 0;
   width: 100%;
-
 }
 
 .chef-header {
@@ -123,11 +124,11 @@ main {
   transform: translateY(100%);
   transition: all 0.4s;
 }
-.chef-social i{
+.chef-social i {
   cursor: pointer;
 }
 .chef-image {
-  transition: all 0.4s 
+  transition: all 0.4s;
 }
 .chef-image-container:hover .chef-image {
   transform: translateY(-10%);
