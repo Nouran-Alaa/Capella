@@ -13,7 +13,7 @@ window.addEventListener("scroll", function () {
 
     navbar.style["boxShadow"] = "2px 4px 10px rgba(0, 0, 0, 0.212)";
 
-    imagelogo.src = "/img/logo@2x.jpeg";
+    imagelogo.src = "/Images/logo@2x.jpeg";
 
     for (let i = 0; i < burgerLine.length; i++) {
       burgerLine[i].style.backgroundColor = "black";
@@ -31,7 +31,7 @@ window.addEventListener("scroll", function () {
       burgerLine[i].style.backgroundColor = "white";
     }
 
-    imagelogo.src = "/img/logo.png";
+    imagelogo.src = "/Images/logo-white.png";
 
     for (let i = 0; i < links.length; i++) {
       links[i].style.color = "white";
