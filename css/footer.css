@@ -1,0 +1,144 @@
+footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-top {
+  background-color: #c4a86a;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.footer-top p {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.footer-wrapper {
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+}
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-left {
+  position: relative;
+}
+
+.footer-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.offer-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.footer-center h3,
+.footer-right h3 {
+  margin-bottom: 10px;
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.footer-center > div {
+  margin-bottom: 5rem;
+}
+
+.footer-bottom {
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-bottom .social-media {
+  margin-bottom: 10px;
+}
+
+.footer-bottom .social-media a {
+  margin: 0 5px;
+}
+
+.social-media {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+.icon-link {
+  text-decoration: inherit;
+  display: flex;
+  align-items: center;
+  flex-shrink: inherit;
+  padding: 20px;
+  background-color: #313030;
+}
+
+.footer-bottom p {
+  margin: 10px 0;
+}
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+}
+.footer-links a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  font-size: 1.4rem;
+}
+
+.footer-paragraph {
+  font-size: 1.2rem;
+}
+/* Media Queries */
+@media screen and (max-width: 860px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-center,
+  .footer-right {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.297);
+  }
+  .footer-top p {
+    font-size: 1.4rem;
+  }
+}

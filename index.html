@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capella</title>
-    <link rel="stylesheet" href="Style/style.css" />
-
+    <!-- CSS MAIN -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,45 +17,110 @@
       href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
       rel="stylesheet"
     />
+    <!-- CHANGE ICON -->
+    <link rel="icon" href="../images/logo@2x.png" />
   </head>
   <body>
-    <header class="header">
-      <div class="nav-container">
-        <div>
-          <img
-            src="Images/logo-white.png"
-            alt="logo"
-            class="logo"
-            loading="lazy"
-          />
+    <header class="header" id="sliderHeader">
+      <!-- NAV -->
+      <nav class="navbar" id="navbar">
+        <a href="#" class="brand"
+          ><img src="/Images/logo-white.png" class="logo-img" id="logo-img"
+        /></a>
+        <!-- NAV BAR -->
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="./HTML/menu.html">Menu</a></li>
+          <li><a class="nav-link" href="./HTML/about.html">About</a></li>
+          <li><a class="nav-link" href="./HTML/contact.html">Contact</a></li>
+          <li><a class="nav-link" href="./HTML/order.html">Order</a></li>
+          <li>
+            <a class="nav-link" href="./HTML/register.html">Registration</a>
+          </li>
+          <li><a class="nav-link" href="./HTML/login.html">Login</a></li>
+        </ul>
+        <!-- BURGER MENU ICON -->
+        <div class="burger" id="burger" onclick="toggleMenu()">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
         </div>
-        <div>
-          <ul class="nav">
-            <li><a href="index.html" target="_blank">Home</a></li>
-            <li><a href="HTML/about.html" target="_blank">About</a></li>
-            <li><a href="HTML/contact.html" target="_blank">Contact</a></li>
-            <li><a href="HTML/order.html" target="_blank">Order</a></li>
-            <li><a href="HTML/menu.html" target="_blank">Menu</a></li>
-            <li><a href="HTML/register.html" target="_blank">Register</a></li>
-            <li><a href="HTML/login.html" target="_blank">Login</a></li>
-          </ul>
+      </nav>
+      <!-- SLIDER -->
+      <div class="slider">
+        <div class="slides">
+          <div
+            class="slide active"
+            style="
+              background-image: url('/images/photodune-5087439-chicken-tagine-m.jpg');
+            "
+            loading="lazy"
+          >
+            <!-- BANNER 1 -->
+            <div class="banner">
+              <h1>Art of Cooking</h1>
+              <p>
+                Where passion sizzles and flavors dance – welcome to our
+                culinary journey.
+              </p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="
+              background-image: url('/images/photodune-4874661-spaghetti-bolognese-with-basil-m1.jpg');
+            "
+            loading="lazy"
+          >
+            <!-- BANNER 2 -->
+            <div class="banner">
+              <h1>Delicious Recipes</h1>
+              <p>
+                Explore our wide variety of delicious recipes and culinary tips.
+              </p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="background-image: url('/images/chickenDish.jpg')"
+            loading="lazy"
+          >
+            <!-- BANNER 3 -->
+            <div class="banner">
+              <h1>Gourmet Experiences</h1>
+              <p>
+                Experience the best gourmet food and exceptional dining
+                experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+          <div class="next" onclick="moveSlide(1)">&#10095;</div>
         </div>
       </div>
-
-      <h1 class="heading-primary">
-        <span class="heading-primary-main">Art of Cooking</span>
-        <span class="heading-primary-sub"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing
-          elit.</span
-        >
-      </h1>
+      <!-- BURGER MENU -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./HTML/menu.html">Menu</a></li>
+          <li><a href="./HTML/about.html">About</a></li>
+          <li><a href="./HTML/contact.html">Contact</a></li>
+          <li><a href="./HTML/order.html">order</a></li>
+          <li><a href="./HTML/register.html">Registration</a></li>
+          <li><a href="./HTML/login.html">Login</a></li>
+        </ul>
+      </div>
     </header>
-
+    <!-- MAIN -->
     <main class="main">
+      <!-- SECTION ABOUT -->
       <section class="section-about">
         <div class="about-content-wrapper">
           <img
-            src="Images/chef.jpg"
+            src="../images/chef.jpg"
             alt="chef picture"
             class="chef-img"
             loading="lazy"
@@ -78,7 +144,7 @@
               consectetur!
             </p>
             <img
-              src="Images/Signature.jpg"
+              src="../images/signature2.png"
               class="signature-img"
               loading="lazy"
             />
@@ -86,332 +152,524 @@
         </div>
       </section>
 
+      <!--PARALLAX -->
       <div class="parallax">
-        <h1 class="title">Chef Recommended</h1>
+        <h2 class="title">Chef Recommended</h2>
         <p class="title-paragraph">SIGNATURES DISHES RECOMMEND BY OUR CHEF .</p>
       </div>
 
-      <section class="highlight-section">
+      <!--CONTENT SECTION -->
+      <section class="content-section">
         <div class="dishes">
           <div class="dish">
             <img
               class="dish-img"
-              src="Images/tuna roast sauce.jpg"
+              src="../images/tuna roast sauce.jpg"
               loading="lazy"
             />
+            <!--CHEF RECOMMENDATION -->
             <div class="dish-info">
-              <h2 class="dish-name">Tuna Roast Source</h2>
-              <h2 class="dish-price">$24.5</h2>
-            </div>
-          </div>
-          <div class="dish">
-            <img class="dish-img" src="Images/Roast Pork.jpg" loading="lazy" />
-            <div class="dish-info">
-              <h2 class="dish-name">Roast Pork (4 Sticks)</h2>
-              <h2 class="dish-price">$15.5</h2>
-            </div>
-          </div>
-          <div class="dish">
-            <img
-              class="dish-img"
-              src="Images/Salted Fried Chicken.jpg"
-              loading="lazy"
-            />
-            <div class="dish-info">
-              <h2 class="dish-name">Salted Fried Chicken</h2>
-              <h2 class="dish-price">$20</h2>
+              <div class="dish-info--top">
+                <h2 class="dish-name">Tuna Roast Source</h2>
+                <h2 class="dish-price">$24.5</h2>
+              </div>
+              <div class="dish-info--bottom">
+                <p class="dish-category">Tuna / Potatoes / Rice</p>
+              </div>
             </div>
           </div>
           <div class="dish">
             <img
               class="dish-img"
-              src="Images/Crab With Curry Sources.jpg"
+              src="../images/Roast Pork.jpg"
               loading="lazy"
             />
             <div class="dish-info">
-              <h2 class="dish-name">Crab With Curry Sources</h2>
-              <h2 class="dish-price">$24.5</h2>
+              <div class="dish-info--top">
+                <h2 class="dish-name">Roast Pork (4 Sticks)</h2>
+                <h2 class="dish-price">$15.5</h2>
+              </div>
+              <div class="dish-info--bottom">
+                <p class="dish-category">Pork / Veggies / Shoyu</p>
+              </div>
             </div>
           </div>
           <div class="dish">
             <img
               class="dish-img"
-              src="Images/Imported Salmon Steak.jpg"
+              src="../images/Salted Fried Chicken.jpg"
               loading="lazy"
             />
             <div class="dish-info">
-              <h2 class="dish-name">Imported Salmon Steak</h2>
-              <h2 class="dish-price">$18.9</h2>
+              <div class="dish-info--top">
+                <h2 class="dish-name">Salted Fried Chicken</h2>
+                <h2 class="dish-price">$20</h2>
+              </div>
+              <div class="dish-info--bottom">
+                <p class="dish-category">Chicken / Olive Oil / Salt</p>
+                <h3 class="dish-highlight">Recommended</h3>
+              </div>
             </div>
           </div>
           <div class="dish">
             <img
               class="dish-img"
-              src="Images/Baked Potato Pizza.jpg"
+              src="../images/Crab With Curry Sources.jpg"
               loading="lazy"
             />
             <div class="dish-info">
-              <h2 class="dish-name">Baked Potato Pizza</h2>
-              <h2 class="dish-price">$12</h2>
+              <div class="dish-info--top">
+                <h2 class="dish-name">Crab With Curry Sources</h2>
+                <h2 class="dish-price">$24.5</h2>
+              </div>
+              <div class="dish-info--bottom">
+                <p class="dish-category">Crab / Potatoes / Rice</p>
+                <h3 class="dish-highlight">Recommended</h3>
+              </div>
+            </div>
+          </div>
+          <div class="dish">
+            <img
+              class="dish-img"
+              src="../images/Imported Salmon Steak.jpg"
+              loading="lazy"
+            />
+            <div class="dish-info">
+              <div class="dish-info--top">
+                <h2 class="dish-name">Imported Salmon Steak</h2>
+
+                <h2 class="dish-price">$18.9</h2>
+              </div>
+              <div class="dish-info--bottom">
+                <p class="dish-category">Salmon / Veggies / Oil</p>
+              </div>
+            </div>
+          </div>
+          <div class="dish">
+            <img
+              class="dish-img"
+              src="../images/Baked Potato Pizza.jpg"
+              loading="lazy"
+            />
+            <div class="dish-info">
+              <div class="dish-info--top">
+                <h2 class="dish-name">Baked Potato Pizza</h2>
+                <h2 class="dish-price">$12</h2>
+              </div>
+              <div class="dish-info--bottom">
+                <p class="dish-category">Potato / Bread / Cheese</p>
+                <h3 class="dish-highlight">NEW</h3>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!--PARALLAX -->
       <div class="parallax parallax-2">
-        <h1 class="title">Popular Dishes</h1>
+        <h2 class="title">Popular Dishes</h2>
         <p class="title-paragraph">OUR MOST POPULAR MENU</p>
       </div>
 
-      <section class="highlight-section">
+      <!--CONTENT SECTION -->
+      <section class="content-section">
+        <!--MENU SECTION -->
         <div class="list">
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Wild Mushroom Bucatini with Kale</h2>
-              <h2 class="dish-price">$14.5</h2>
+          <div class="dishes-right">
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Wild Mushroom Bucatini with Kale</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$14.5</h2>
+              </div>
+              <p class="dish-category">Mushroom / Veggie / White Sources</p>
             </div>
-            <p class="dish-category">Mushroom / Veggie / White Sources</p>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Lemon and Garlic Green Beans</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$14.5</h2>
+              </div>
+              <p class="dish-category">Lemon / Garlic / Beans</p>
+            </div>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Lamb-Beef Kofka Skewers with Tzatziki</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$24.5</h2>
+              </div>
+              <p class="dish-category">Lamb / Wine / Butter</p>
+            </div>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Imported Oysters Grill (5 Pieces)</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$15.5</h2>
+              </div>
+              <p class="dish-category">Oysters / Veggie / Ginger</p>
+            </div>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Lemon-Rosemary Chicken</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$19.9</h2>
+              </div>
+              <p class="dish-category">Chicken / Rosemary / Lemon</p>
+            </div>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Meatloaf with Black Pepper-Honey BBQ</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$19.9</h2>
+              </div>
+              <p class="dish-category">Pepper / Chicken / Honey</p>
+            </div>
           </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Lemon and Garlic Green Beans</h2>
-              <h2 class="dish-price">$14.5</h2>
+          <div class="dishes-left">
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Roasted Red Potatoes with Rosemary</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$15.5</h2>
+              </div>
+              <p class="dish-category">Potatoes / Rosemary / Butter</p>
             </div>
-            <p class="dish-category">Lemon / Garlic / Beans</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Lamb-Beef Kofka Skewers with Tzatziki</h2>
-              <h2 class="dish-price">$24.5</h2>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Bacon-Wrapped Shrimp with Garlic</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$19.9</h2>
+              </div>
+              <p class="dish-category">Bacon / Shrimp / Garlic</p>
             </div>
-            <p class="dish-category">Lamb / Wine / Butter</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Imported Oysters Grill (5 Pieces)</h2>
-              <h2 class="dish-price">$15.5</h2>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Pork with Italian Salsa Verde</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$19.9</h2>
+              </div>
+              <p class="dish-category">Pork / Tomatoes / Veggies</p>
             </div>
-            <p class="dish-category">Oysters / Veggie / Ginger</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Lemon-Rosemary Chicken</h2>
-              <h2 class="dish-price">$19.9</h2>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Grilled Pork with Preserved Lemons</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$22</h2>
+              </div>
+              <p class="dish-category">Pork / Lemons / Onions</p>
             </div>
-            <p class="dish-category">Chicken / Rosemary / Lemon</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Meatloaf with Black Pepper-Honey BBQ</h2>
-              <h2 class="dish-price">$19.9</h2>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Apple Smoked Chicken with White Sauce</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$18.9</h2>
+              </div>
+              <p class="dish-category">Chicken / Apple / Tomatos</p>
             </div>
-            <p class="dish-category">Pepper / Chicken / Honey</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Roasted Red Potatoes with Rosemary</h2>
-              <h2 class="dish-price">$15.5</h2>
+            <div class="list-dish">
+              <div class="list-info">
+                <h2 class="dish-name">Prawn Sausage Cassoulet</h2>
+                <span class="dish-dots"></span>
+                <h2 class="dish-price">$30.5</h2>
+              </div>
+              <p class="dish-category">Prawn / Sausage / Totatos</p>
             </div>
-            <p class="dish-category">Potatoes / Rosemary / Butter</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Bacon-Wrapped Shrimp with Garlic</h2>
-              <h2 class="dish-price">$19.9</h2>
-            </div>
-            <p class="dish-category">Bacon / Shrimp / Garlic</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Pork with Italian Salsa Verde</h2>
-              <h2 class="dish-price">$19.9</h2>
-            </div>
-            <p class="dish-category">Pork / Tomatoes / Veggies</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Grilled Pork with Preserved Lemons</h2>
-              <h2 class="dish-price">$22</h2>
-            </div>
-            <p class="dish-category">Pork / Lemons / Onions</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Apple Smoked Chicken with White Sauce</h2>
-              <h2 class="dish-price">$18.9</h2>
-            </div>
-            <p class="dish-category">Chicken / Apple / Tomatos</p>
-          </div>
-          <div class="list-dish">
-            <div class="list-info">
-              <h2 class="dish-name">Prawn Sausage Cassoulet</h2>
-              <h2 class="dish-price">$30.5</h2>
-            </div>
-            <p class="dish-category">Prawn / Sausage / Totatos</p>
           </div>
         </div>
       </section>
-      <div>
-        <div class="parallax parallax-3">
-          <h2 class="title">Ingredients</h2>
-          <p class="title-paragraph">
-            ONLY THE BEST ONES FROM ALL OVER THE WORLD
-          </p>
+
+      <!-- PARALLAX -->
+      <div class="parallax parallax-3">
+        <h2 class="title">Ingredients</h2>
+        <p class="title-paragraph">
+          ONLY THE BEST ONES FROM ALL OVER THE WORLD
+        </p>
+      </div>
+
+      <!-- CONTENT SECTION -->
+      <section class="content-section">
+        <!-- INGREDIENTS SECTION -->
+        <div class="ingredients-section">
+          <div class="ingredient-content-typo">
+            <div>
+              <h2 class="heading-secondary">
+                We Created best dinning experience for you & your family
+              </h2>
+              <h3 class="heading-secondary-sub">The Art of Cooking</h3>
+            </div>
+            <p class="paragraph">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+              architecto veritatis assumenda quibusdam, eum repellat. Ad qui
+              consequuntur reprehenderit non! Officia rerum ut sed unde illum
+              cupiditate facere ipsam et nesciunt repudiandae, quis corporis
+              repellat quia soluta odio ea facilis iure sequi illo est ad
+              reiciendis sint placeat cumque? Rerum, tempora commodi! Facere
+              laudantium officia dignissimos?
+            </p>
+          </div>
+
+          <div class="images-container">
+            <img
+              src="../images/chefs-images.jpg"
+              class="image"
+              loading="lazy"
+            />
+            <img
+              src="../images/gourmet dish.jpg"
+              class="image"
+              loading="lazy"
+            />
+            <img
+              src="../images/gourmet dish 2.jpg"
+              class="image"
+              loading="lazy"
+            />
+            <img
+              src="../images/chef cooking.jpg"
+              class="image"
+              loading="lazy"
+            />
+          </div>
         </div>
+      </section>
 
-        <section class="highlight-section">
-          <div class="ingredients-section">
-            <div class="ingredient-content-typo">
-              <div>
-                <h2 class="heading-secondary" contenteditable="true">
-                  We Created best dinning experience for you & your family
-                </h2>
-                <h3 class="heading-secondary-sub">The Art of Cooking</h3>
+      <!-- PARALLAX -->
+      <div class="parallax parallax-4">
+        <h2 class="title">Our Chef</h2>
+        <p class="title-paragraph">THIS IS AN EXAMPLE OF SUB TITLE</p>
+
+        <!-- OUR CHEF SECTION -->
+        <div class="profiles">
+          <div class="chef-profile">
+            <div class="card">
+              <div class="front">
+                <div class="chef-image-container">
+                  <img
+                    src="../images/chef-1.jpg"
+                    alt="Mark Anthony img"
+                    class="chef-image"
+                  />
+                </div>
+                <div class="front-lower">
+                  <div>
+                    <h3>Mark Anthony</h3>
+                    <h5>Founder & CEO</h5>
+                  </div>
+
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eveniet soluta nam consequatur enim tenetur quod voluptatum
+                    inventore corrupti, deleniti magni.
+                  </p>
+                </div>
               </div>
-              <p class="paragraph">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
-                architecto veritatis assumenda quibusdam, eum repellat. Ad qui
-                consequuntur reprehenderit non! Officia rerum ut sed unde illum
-                cupiditate facere ipsam et nesciunt repudiandae, quis corporis
-                repellat quia soluta odio ea facilis iure sequi illo est ad
-                reiciendis sint placeat cumque? Rerum, tempora commodi! Facere
-                laudantium officia dignissimos?
-              </p>
-            </div>
-            <div class="images">
-              <div class="images-container">
-                <img
-                  src="Images/chefs-images.jpg"
-                  class="image"
-                  loading="lazy"
-                />
-                <img
-                  src="Images/gourmet dish.jpg"
-                  class="image"
-                  loading="lazy"
-                />
-                <img
-                  src="Images/gourmet dish 2.jpg"
-                  class="image"
-                  loading="lazy"
-                />
-                <img
-                  src="Images/chef cooking.jpg"
-                  class="image"
-                  loading="lazy"
-                />
+              <div class="back">
+                <h3>FOLLOW</h3>
+                <div class="chef-socials">
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-facebook fa-2xl"
+                    ></i
+                  ></a>
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-linkedin fa-2xl"
+                    ></i
+                  ></a>
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-twitter fa-2xl"
+                    ></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
-        </section>
+          <div class="chef-profile">
+            <div class="card">
+              <div class="front">
+                <div class="chef-image-container">
+                  <img
+                    src="../images/chef-2.jpg"
+                    alt="Jessica Lee img"
+                    class="chef-image"
+                  />
+                </div>
+                <div class="front-lower">
+                  <div>
+                    <h3>Jessica Lee</h3>
+                    <h5>Chinese Kitchen Lead</h5>
+                  </div>
 
-        <div class="parallax parallax-4">
-          <div>
-            <h2 class="title">Our Chef</h2>
-            <p class="title-paragraph">THIS IS AN EXAMPLE OF SUB TITLE</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eveniet soluta nam consequatur enim tenetur quod voluptatum
+                    inventore corrupti, deleniti magni.
+                  </p>
+                </div>
+              </div>
+              <div class="back">
+                <h3>FOLLOW</h3>
+                <div class="chef-socials">
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-facebook fa-2xl"
+                    ></i
+                  ></a>
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-linkedin fa-2xl"
+                    ></i
+                  ></a>
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-twitter fa-2xl"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="chef-profile">
+            <div class="card">
+              <div class="front">
+                <div class="chef-image-container">
+                  <img
+                    src="../images/chef-3.jpg"
+                    alt="John Bennett img"
+                    class="chef-image"
+                  />
+                </div>
+                <div class="front-lower">
+                  <div>
+                    <h3>John Bennett</h3>
+                    <h5>French Kitchen Lead</h5>
+                  </div>
 
-          <div class="profiles">
-            <div class="chef-profile">
-              <div class="chef-image-container">
-                <img
-                  src="Images/chef-1.jpg"
-                  alt="chef"
-                  class="chef-image"
-                  loading="lazy"
-                />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eveniet soluta nam consequatur enim tenetur quod voluptatum
+                    inventore corrupti, deleniti magni.
+                  </p>
+                </div>
               </div>
-              <h3 class="chef-name">Mark Anthony</h3>
-              <h3 class="chef-position">Founder & CEO</h3>
-
-              <p class="chef-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                soluta nam consequatur enim tenetur quod voluptatum inventore
-                corrupti, deleniti magni.
-              </p>
-            </div>
-
-            <div class="chef-profile">
-              <div class="chef-image-container">
-                <img
-                  src="Images/chef-2.jpg"
-                  alt="chef"
-                  class="chef-image"
-                  loading="lazy"
-                />
+              <div class="back">
+                <h3>FOLLOW</h3>
+                <div class="chef-socials">
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-facebook fa-2xl"
+                    ></i
+                  ></a>
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-linkedin fa-2xl"
+                    ></i
+                  ></a>
+                  <a href="#"
+                    ><i
+                      style="color: black"
+                      class="fa-brands fa-twitter fa-2xl"
+                    ></i
+                  ></a>
+                </div>
               </div>
-              <h3 class="chef-name">Jessica Lee</h3>
-              <h3 class="chef-position">Chinese Kitchen Lead</h3>
-              <p class="chef-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                soluta nam consequatur enim tenetur quod voluptatum inventore
-                corrupti, deleniti magni.
-              </p>
-            </div>
-
-            <div class="chef-profile">
-              <div class="chef-image-container">
-                <img
-                  src="Images/chef-3.jpg"
-                  alt="chef"
-                  class="chef-image"
-                  loading="lazy"
-                />
-              </div>
-
-              <h3 class="chef-name">John Bennett</h3>
-              <h3 class="chef-position">French Kitchen Lead</h3>
-              <p class="chef-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                soluta nam consequatur enim tenetur quod voluptatum inventore
-                corrupti, deleniti magni.
-              </p>
             </div>
           </div>
         </div>
       </div>
-
+      <!-- FOOTER  -->
       <footer>
         <div class="footer-top">
-          <p>Purchase Capella Theme Now From Themeforest, Only $58</p>
+          <p>
+            Experience the finest dining with our gourmet dishes and exceptional
+            service.
+          </p>
         </div>
         <div class="footer-content">
           <div class="footer-wrapper">
+            <!-- FOOTER LEFT -->
             <div class="footer-left">
-              <img src="Images/image.png" alt="food ad" loading="lazy" />
+              <img src="../images/image.png" alt="food ad" loading="lazy" />
             </div>
-
+            <!-- FOOTER CENTER -->
             <div class="footer-center">
-              <div>
-                <h3 class="footer-text">ADDRESS</h3>
+              <h3 class="footer-text">ADDRESS</h3>
+              <div class="icon-wrapper">
                 <p class="footer-paragraph">
+                  <i
+                    class="fa-solid fa-location-dot"
+                    style="color: #ffffff"
+                  ></i>
                   732/21 Second Street, Manchester, King Street, Kingston United
                   Kingdom
                 </p>
               </div>
 
-              <div>
-                <h3 class="footer-text">FIND US ON</h3>
-                <div class="social-media">
-                  <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-                  <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
-                  <a href="#"><img src="youtube-icon.png" alt="YouTube" /></a>
-                  <a href="#"><img src="vimeo-icon.png" alt="Vimeo" /></a>
-                  <a href="#"
-                    ><img src="pinterest-icon.png" alt="Pinterest"
-                  /></a>
-                </div>
+              <h3 class="footer-text">FIND US ON</h3>
+              <div class="social-media">
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-facebook-f fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-twitter fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-youtube fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-vimeo-v fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-pinterest-p fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
               </div>
             </div>
+            <!-- FOOTER RIGHT -->
             <div class="footer-right">
               <h3 class="footer-text">OPEN HOURS</h3>
-              <p class="footer-paragraph">Monday – Friday<br />10 AM – 7 PM</p>
-              <p class="footer-paragraph">+66 7883456<br />+66 233459876</p>
+              <div class="icon-wrapper">
+                <p class="footer-paragraph">
+                  <i class="fa-regular fa-clock"></i>
+                  Monday – Friday<br />10 AM – 7 PM
+                </p>
+              </div>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-phone"></i>
+                <p class="footer-paragraph">+66 7883456</p>
+              </div>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-phone"></i>
+                <p class="footer-paragraph">+66 7883456</p>
+              </div>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© Copyright Team 4 | Sprints All Right Reserved.</p>
+          <p>&copy; Copyright Team 4 | Sprints All Right Reserved.</p>
           <div class="footer-links">
             <a href="#">Our Chef</a>
             <a href="#">Reservation</a>
@@ -420,5 +678,11 @@
         </div>
       </footer>
     </main>
+    <!-- Script -->
+    <script src="./Javascript/script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/1c758ec64d.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
