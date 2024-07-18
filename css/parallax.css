@@ -1,6 +1,7 @@
 /* PARALLAX */
 .parallax {
   background-image: url("../images/woman-eats-marshmallow-cake-with-strawberry.jpg");
+
   height: 500px;
   background-attachment: fixed;
   background-position: center;
