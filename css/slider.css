@@ -1,0 +1,105 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.banner h1 {
+  font-family: "Yellowtail", cursive;
+  font-size: 8rem;
+  margin: 0;
+  animation: moveInLeft 1s ease-in;
+}
+
+.banner p {
+  font-family: inherit;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: moveInRight 1s ease-in;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+  padding: 16px;
+  user-select: none;
+}
+/* Media Queries */
+@media (max-width: 761px) {
+  .banner h1 {
+    font-size: 4.7rem;
+  }
+
+  .banner p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 4rem;
+  }
+
+  .banner p {
+    font-size: 1.2rem;
+  }
+}
