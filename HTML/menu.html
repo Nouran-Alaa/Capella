@@ -1,118 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Restaurant</title>
-        <style>
-            body {
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            }
-    
-            .header {
-                text-align: center;
-                padding: 20px;
-            }
-    
-            .menu {
-                text-align: center;
-                padding: 10px;
-                background-color: #f8f8f8;
-                margin-bottom: 20px;
-            }
-    
-            .section {
-                margin: 20px 0;
-            }
-    
-            .section h2,
-            .section h4 {
-                text-align: center;
-            }
-    
-            .flex-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-            }
-    
-            .item {
-                flex: 0 0 calc(33.333% - 20px);
-                max-width: calc(33.333% - 20px);
-                text-align: center;
-            }
-    
-            .item img {
-                width: 100%;
-                height: auto;
-            }
-    
-            .popular-item {
-                flex: 0 0 calc(50% - 20px);
-                max-width: calc(50% - 20px);
-                text-align: center;
-            }
-        </style>
-    </head>
-    
-    <body>
-        <div class="menu">
-            <h1>Menu</h1>
+    <title>Menu</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/menu-login.css" />
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="margin: 0px;">
+      <!-- NAV -->
+      <nav class="navbar " id="navbar">
+        <a href="#" class="brand"
+          ><img src="../Images/logo-white.png" class="logo-img" id="logo-img"
+        /></a>
+        <!-- NAV BAR -->
+        <ul class="nav-links">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="menu.html">Menu</a></li>
+          <li><a class="nav-link" href="about.html">About </a></li>
+          <li><a class="nav-link" href="contact.html">Contact </a></li>
+          <li><a class="nav-link" href="order.html">Order</a></li>
+          <li>
+            <a class="nav-link" href="register.html">Registration</a>
+          </li>
+          <li><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+        <!-- BURGER MENU ICON -->
+        <div class="burger" id="burger" onclick="toggleMenu()">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
         </div>
-    
-        <div class="section">
-            <h2>Chef Recommended</h2>
-            <h4>SIGNATURE DISHES RECOMMENDED BY OUR CHEF</h4>
-            <div class="flex-container">
-                <div class="item">
-                    <img src="https://static01.nyt.com/images/2023/11/22/multimedia/22rest-bangkok2-ghzm/21rest-bangkok2-ghzm-videoSixteenByNine3000.jpg" />
-                    <h3>Salted Chicken <span style="color: green;">$15.00</span></h3>
-                    <p><small>Chicken / Olive Oil / Salt</small></p>
+
+         <!-- BURGER MENU -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="order.html">order</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      </nav>
+
+    <div class="parallax">
+        <div id="menu" >
+
+            <div class="first d-flex align-items-center">
+                <h1>Chef Recommended</h1>
+                <h2>SIGNATURE DISHES RECOMMENDED BY OUR CHEF</h2>
+            </div>
+
+            <div class="section1">
+                <div class="flex-container">
+                    <div class="mencont">
+                        <div class="item">
+                            <img
+                                src="https://static01.nyt.com/images/2023/11/22/multimedia/22rest-bangkok2-ghzm/21rest-bangkok2-ghzm-videoSixteenByNine3000.jpg" />
+                            <h3>Salted Chicken <span style="color: green; text-align:right;">$15.00</span></h3>
+                            <p><small>Chicken / Olive Oil / Salt</small></p>
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://assets.architecturaldigest.in/photos/60084f361b516d492c3ab3ec/16:9/w_2560%2Cc_limit/Mumbai-restaurant-COVID-19-1366x768.jpg" />
+                            <h3>Baked Mushroom Pizza <span style="color: green;">$20.00</span></h3>
+                            <p><small>Mushroom / Bread / Cheese</small></p>
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/11/14/0/FN_healthy-fast-food-applebees-steak_s4x3.jpg.rend.hgtvcom.616.462.suffix/1510694267044.jpeg" />
+                            <h3>Grilled Steak <span style="color: green;">$25.00</span></h3>
+                            <p><small>Steak / Vegetables / Garlic</small></p>
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://static.vecteezy.com/system/resources/previews/026/595/699/large_2x/a-delicious-crispy-pork-belly-fancy-on-plate-restaurant-food-and-asian-cuisine-concept-by-ai-generated-free-photo.jpg" />
+                            <h3>Crispy Pork <span style="color: green;">$18.00</span></h3>
+                            <p><small>Pork / Veggies / Shoyu</small></p>
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://www.sun-sentinel.com/wp-content/uploads/migration/2018/12/27/LTZ5A5LESBC5PA6UGTMHYTECM4.jpg?w=620` " />
+                            <h3>Sweet & Sour Chicken <span style="color: green; text-align:right;">$15.00</span></h3>
+                            <p><small>Chicken / Olive Oil / Salt</small></p>
+                        </div>
+                        <div class="item">
+                            <img
+                                src="https://static01.nyt.com/images/2023/11/22/multimedia/22rest-bangkok2-ghzm/21rest-bangkok2-ghzm-videoSixteenByNine3000.jpg" />
+                            <h3>Salted Chicken <span style="color: green; text-align:right;">$15.00</span></h3>
+                            <p><small>Chicken / Onion / Soy sauce</small></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="https://assets.architecturaldigest.in/photos/60084f361b516d492c3ab3ec/16:9/w_2560%2Cc_limit/Mumbai-restaurant-COVID-19-1366x768.jpg" />
-                    <h3>Baked Mushroom Pizza <span style="color: green;">$20.00</span></h3>
-                    <p><small>Mushroom / Bread / Cheese</small></p>
-                </div>
-                <div class="item">
-                    <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/11/14/0/FN_healthy-fast-food-applebees-steak_s4x3.jpg.rend.hgtvcom.616.462.suffix/1510694267044.jpeg" />
-                    <h3>Grilled Steak <span style="color: green;">$25.00</span></h3>
-                    <p><small>Steak / Vegetables / Garlic</small></p>
-                </div>
-                <div class="item">
-                    <img src="https://static.vecteezy.com/system/resources/previews/026/595/699/large_2x/a-delicious-crispy-pork-belly-fancy-on-plate-restaurant-food-and-asian-cuisine-concept-by-ai-generated-free-photo.jpg" />
-                    <h3>Crispy Pork <span style="color: green;">$18.00</span></h3>
-                    <p><small>Pork / Veggies / Shoyu</small></p>
+            </div>
+
+            <div class="first">
+                <h1>Popular Dishes</h1>
+                <h2>OUR MOST POPULAR MENU</h2>
+            </div>
+
+            <div class="section2">
+                <div class="popdish_container">
+                    <div class="innercont">
+                        <div class="inner2">
+                            <div class="popular-item">
+                                <h3>Lemon Caper Chicken Penne <span style="color: green;">$22.00</span></h3>
+                                <p><small>Chicken / Capers / Cream Sauce</small></p>
+                            </div>
+                            <div class="popular-item">
+                                <h3>Shrimp Diablo <span style="color: green;">$24.00</span></h3>
+                                <p><small>Chili Flakes / Tomato Basil Cream Sauce / Parmesan</small></p>
+                            </div>
+                            <div class="popular-item">
+                                <h3>Bulgogee Wrap <span style="color: green;">$17.00</span></h3>
+                                <p><small>Beef / Korean Spices / Onion</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="innercont">
+                        <div class="inner2">
+                            <div class="popular-item">
+                                <h3>Cooked Shrimp <span style="color: green;">$19.00</span></h3>
+                                <p><small>Shrimp / Crab / Avocado</small></p>
+                            </div>
+                            <div class="popular-item">
+                                <h3>Spinach & Mushroom Quiche <span style="color: green;">$16.00</span></h3>
+                                <p><small>Quiche prepared fresh / Mushroom / Onion</small></p>
+                            </div>
+                            <div class="popular-item">
+                                <h3>Baked Mushroom Pizza <span style="color: green;">$16.00</span></h3>
+                                <p><small>Mushroom / Bread / Cheese</small></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    
-        <div class="section">
-            <h2>Popular Dishes</h2>
-            <h4>OUR MOST POPULAR MENU</h4>
-            <div class="flex-container">
-                <div class="popular-item">
-                    <h3>Lemon Caper Chicken Penne <span style="color: green;">$22.00</span></h3>
-                    <p><small>Chicken / Capers / Cream Sauce</small></p>
+    </div>
+    <footer>
+        <div class="footer-top">
+            <p>
+                Experience the finest dining with our gourmet dishes and exceptional
+                service.
+            </p>
+        </div>
+        <div class="footer-content">
+            <div class="footer-wrapper">
+                <!-- FOOTER LEFT -->
+                <div class="footer-left">
+                    <img src="../Images/image.png" alt="food ad" loading="lazy" />
                 </div>
-                <div class="popular-item">
-                    <h3>Shrimp Diablo <span style="color: green;">$24.00</span></h3>
-                    <p><small>Chili Flakes / Tomato Basil Cream Sauce / Parmesan</small></p>
+                <!-- FOOTER CENTER -->
+                <div class="footer-center">
+                    <h3 class="footer-text">ADDRESS</h3>
+                    <div class="icon-wrapper">
+                        <p class="footer-paragraph">
+                            <i class="fa-solid fa-location-dot" style="color: #ffffff"></i>
+                            732/21 Second Street, Manchester, King Street, Kingston United
+                            Kingdom
+                        </p>
+                    </div>
+
+                    <h3 class="footer-text">FIND US ON</h3>
+                    <div class="social-media">
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-facebook-f fa-2xl" style="color: #ffffff"></i>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-twitter fa-2xl" style="color: #ffffff"></i>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff"></i>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-vimeo-v fa-2xl" style="color: #ffffff"></i>
+                        </a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-brands fa-pinterest-p fa-2xl" style="color: #ffffff"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="popular-item">
-                    <h3>Bulgogee Wrap <span style="color: green;">$17.00</span></h3>
-                    <p><small>Beef / Korean Spices / Onion</small></p>
-                </div>
-                <div class="popular-item">
-                    <h3>Cooked Shrimp <span style="color: green;">$19.00</span></h3>
-                    <p><small>Shrimp / Crab / Avocado</small></p>
-                </div>
-                <div class="popular-item">
-                    <h3>Spinach & Mushroom Quiche <span style="color: green;">$16.00</span></h3>
-                    <p><small>Quiche prepared fresh / Mushroom / Onion</small></p>
+                <!-- FOOTER RIGHT -->
+                <div class="footer-right">
+                    <h3 class="footer-text">OPEN HOURS</h3>
+                    <div class="icon-wrapper">
+                        <p class="footer-paragraph">
+                            <i class="fa-regular fa-clock"></i>
+                            Monday – Friday<br />10 AM – 7 PM
+                        </p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+                        <p class="footer-paragraph">+66 7883456</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+                        <p class="footer-paragraph">+66 7883456</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+        <div class="footer-bottom">
+            <p>&copy; Copyright Team 4 | Sprints All Right Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Our Chef</a>
+                <a href="#">Reservation</a>
+                <a href="#">Shop</a>
+            </div>
+        </div>
+    </footer>
+    </main>
+    <!-- Script -->
+    <script src="../main.js" defer></script>
+    <script src="https://kit.fontawesome.com/1c758ec64d.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

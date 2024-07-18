@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: center;
 }
+.nav-links li a{
+    font-size: 14px;
+    }
 
 .contact-bg h1 {
     font-size: 70px;
@@ -93,3 +96,18 @@ h6{
     background: #4c66a4;
 }
 
+.footer-top span{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 25px 0;
+ 
+}
+.footer-top span{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 25px 0;
+ 
+}
+.footer-content p {
+    font-size: 14px !important;
+}

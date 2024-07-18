@@ -1,450 +1,507 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Registration Form</title>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/order.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
+    <link
       rel="stylesheet"
-      href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css"
-    /> -->
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css"
+      integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      p {
-        line-height: 28px;
-      }
-      .resrv {
-        background-image: url("../Images/resrv1.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 300px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-      }
-      .top {
-        text-align: center;
-        margin: auto;
-        position: relative;
-        z-index: 2;
-      }
-      .parallax {
-        background-color: rgba(0, 0, 0, 0.2);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-      }
-      .order {
-        max-width: 1000px;
-        margin: auto;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .food {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-      }
-      .price {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-      }
-      .prices {
-        display: flex;
-        flex-direction: row;
-        align-content: end;
-        justify-content: space-between;
-        align-items: center;
-        margin: 5px;
-        width: 100%;
-      }
-      .inner {
-        max-width: 1000px;
-        margin: auto;
-        padding: 20px 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .sidebar {
-        width: 300px;
-        align-items: center;
-        padding: 10px;
-        background-color: black;
-        color: white;
-      }
-      .inner_sidebar {
-        border: rgba(251, 243, 243, 0.533) dashed 2px;
-        text-align: center;
-      }
-      .payment {
-        display: flex;
-        justify-content: space-evenly;
-      }
-    </style>
+    <title>Order</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <div class="resrv">
-        <div class="top">
-          <h1
-            style="
-              font-family: Yellowtail, cursive;
-              font-weight: 400;
-              font-size: 60px;
-              font-style: normal;
-              color: white;
-              margin-top: 145px;
-            "
-          >
-            Your Cart
-          </h1>
-        </div>
-        <div class="parallax"></div>
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+      <a href="#" class="brand"
+        ><img src="../Images/logo-white.png" class="logo-img" id="logo-img"
+      /></a>
+
+      <!-- NAV BAR -->
+      <ul class="nav-links">
+        <li><a class="nav-link" href="../index.html">Home</a></li>
+        <li><a class="nav-link" href="menu.html">Menu</a></li>
+        <li><a class="nav-link" href="about.html">About </a></li>
+        <li><a class="nav-link" href="contact.html">Contact </a></li>
+        <li><a class="nav-link" href="order.html">Order</a></li>
+        <li>
+          <a class="nav-link" href="register.html">Registration</a>
+        </li>
+        <li><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+
+      <!-- BURGER MENU ICON -->
+      <div class="burger" id="burger" onclick="toggleMenu()">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
       </div>
-      <div class="content" style="margin-top: 320px">
-        <div class="order">
-          <h1 style="padding: 20px 50px">Your order</h1>
-          <div class="inner">
-            <div class="food">
-              <div class="check">
-                <input type="checkbox" /> <label for="">Product 1</label>
-              </div>
-              <br />
-              <div class="check">
-                <input type="checkbox" /> <label for="">Product 2</label>
-              </div>
-              <br />
-              <div class="check">
-                <input type="checkbox" /> <label for="">Product 3</label>
-              </div>
-              <br />
-              <div class="check">
-                <input type="checkbox" /> <label for="">Product 4</label>
-              </div>
-              <br />
-            </div>
-            <div class="price">
-              <div class="prices">
-                <div class="quantity-counter" style="width: 100px">
-                  <button
-                    id="counter-increment"
-                    class="increment"
-                    style="padding: 4px 8px"
-                  >
-                    +
-                  </button>
-                  <input
-                    id="counter-value"
-                    class="value"
-                    type="number"
-                    value="0"
-                    style="width: 40px; text-align: center; padding: 4px"
-                  />
-                  <button
-                    id="counter-decrement"
-                    class="decrement"
-                    style="padding: 4px 8px"
-                  >
-                    -
-                  </button>
+
+      <!-- BURGER MENU -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="order.html">order</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="order-bg mb-5">
+      <h1>Order Now!</h1>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- Cart -->
+      <section class="py-5">
+        <div class="container px-lg-5">
+          <div class="row px-lg-5">
+            <!-- Order Summary -->
+            <div class="col-xl-4 col-lg-12">
+              <div class="mt-5 mt-lg-0 m-1">
+                <div class="card border shadow cart_list">
+                  <div class="bg-transparent px-0">
+                    <h5 class="mb-0 fw-bold border-bottom pb-2">
+                      Order Summary
+                    </h5>
+                    <p>subtotal: <span>$124.00</span></p>
+                    <p>delivery: <span>$20.00</span></p>
+                    <p>discount: <span>$10.00</span></p>
+                    <p class="fs-17 border-top pt-2 fw-bold">
+                      <span>total:</span> <span>$154.00</span>
+                    </p>
+
+                    <!-- Code Coupon -->
+                    <div class="input-group my-3 w-100">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Code Coupon"
+                      />
+                      <button
+                        class="btn btn-outline-secondary apply bg-beige"
+                        type="button"
+                        id="button-addon2"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div class="dollars"><p>80.00$</p></div>
-              </div>
-              <div class="prices">
-                <div class="quantity-counter" style="width: 100px">
-                  <button
-                    id="counter-increment"
-                    class="increment"
-                    style="padding: 4px 8px"
-                  >
-                    +
-                  </button>
-                  <input
-                    id="counter-value"
-                    class="value"
-                    type="number"
-                    value="0"
-                    style="width: 40px; text-align: center; padding: 4px"
-                  />
-                  <button
-                    id="counter-decrement"
-                    class="decrement"
-                    style="padding: 4px 8px"
-                  >
-                    -
-                  </button>
-                </div>
-                <div class="dollars"><p>80.00$</p></div>
-              </div>
-              <div class="prices">
-                <div class="quantity-counter" style="width: 100px">
-                  <button
-                    id="counter-increment"
-                    class="increment"
-                    style="padding: 4px 8px"
-                  >
-                    +
-                  </button>
-                  <input
-                    id="counter-value"
-                    class="value"
-                    type="number"
-                    value="0"
-                    style="width: 40px; text-align: center; padding: 4px"
-                  />
-                  <button
-                    id="counter-decrement"
-                    class="decrement"
-                    style="padding: 4px 8px"
-                  >
-                    -
-                  </button>
-                </div>
-                <div class="dollars"><p>80.00$</p></div>
-              </div>
-              <div class="prices">
-                <div class="quantity-counter" style="width: 100px">
-                  <button
-                    id="counter-increment"
-                    class="increment"
-                    style="padding: 4px 8px"
-                  >
-                    +
-                  </button>
-                  <input
-                    id="counter-value"
-                    class="value"
-                    type="number"
-                    value="0"
-                    style="width: 40px; text-align: center; padding: 4px"
-                  />
-                  <button
-                    id="counter-decrement"
-                    class="decrement"
-                    style="padding: 4px 8px"
-                  >
-                    -
-                  </button>
-                </div>
-                <div class="dollars"><p>80.00$</p></div>
               </div>
             </div>
-          </div>
-          <div
-            class="total"
-            style="
-              padding: 20px 50px;
-              display: flex;
-              justify-content: space-between;
-            "
-          >
-            <h2 style="padding: 0px 20px">Total:</h2>
-            <div class="dollars"><h3>320.00$</h3></div>
-          </div>
-        </div>
-        <hr />
-        <div class="inner">
-          <div class="text" style="width: 490px">
-            <h1>Billing Information</h1>
-            <br />
+
+            <!-- Order Details -->
             <div
-              class="text_form"
-              style="padding: 40px; border: solid 4px rgb(197, 194, 194)"
+              class="col-xl-8 card border shadow-none py-3 px-3 bg-light order-xl-first"
             >
-              <form action>
-                <div>
-                  <label for=""><b>Your Name</b></label>
-                  <div style="display: flex; justify-content: space-between">
-                    <input
-                      type="text"
-                      placeholder="First Name"
-                      style="width: 48%"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last Name"
-                      style="width: 48%"
-                    />
+              <h5 class="cart py-3">Your Cart</h5>
+
+              <!-- Item1 -->
+              <div class="card border shadow-none">
+                <div class="card-body">
+                  <!-- Photo and Name section -->
+                  <div class="d-flex align-items-start border-bottom pb-3">
+                    <div class="me-4">
+                      <img
+                        src="../Images/Spicy-Crab-Ramen.jpg"
+                        alt=""
+                        class="avatar-lg rounded py-2"
+                      />
+                    </div>
+                    <div class="flex-grow-1 align-self-center overflow-hidden">
+                      <div>
+                        <h5 class="text-truncate fs-17">
+                          <a href="#" class="text-dark">Spicy Crab Ramen </a>
+                        </h5>
+                        <p class="text-muted mb-0">
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star-half text-warning"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-0 ms-2">
+                      <ul class="list-inline mb-0 font-size-16">
+                        <li class="list-inline-item">
+                          <a href="#" class="text-muted px-1">
+                            <i
+                              class="mdi mdi-trash-can-outline trash-color"
+                            ></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="text-muted px-1">
+                            <i class="mdi mdi-heart-outline heart-color"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Price and Quantity section -->
+                  <div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Price</p>
+                          <h5 class="mb-0 mt-2 fs-17">
+                            <span class="text-muted me-2"
+                              ><del class="fw-normal">$200</del></span
+                            >$150
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="col-md-5 px-lg-5 px-md-5">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Quantity</p>
+                          <div class="qty">
+                            <span class="minus">-</span>
+                            <input
+                              type="number"
+                              class="count"
+                              name="qty"
+                              value="2"
+                            />
+                            <span class="plus">+</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Total</p>
+                          <h5 class="fs-17">$300</h5>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <br />
-                <div>
-                  <label for=""><b>Your Email</b></label>
+              </div>
+              <!-- end card -->
 
-                  <input
-                    type="text"
-                    placeholder="Email Address"
-                    style="width: 100%"
-                  />
-                </div>
-                <br />
-                <div>
-                  <label for=""><b>Phone Number</b></label>
+              <!-- Item2 -->
+              <div class="card border shadow-none">
+                <div class="card-body">
+                  <!-- Photo and Name section -->
+                  <div class="d-flex align-items-start border-bottom pb-3">
+                    <div class="me-4">
+                      <img
+                        src="../Images/Imported-Salmon-Steak.jpg"
+                        alt=""
+                        class="avatar-lg rounded py-2"
+                      />
+                    </div>
+                    <div class="flex-grow-1 align-self-center overflow-hidden">
+                      <div>
+                        <h5 class="text-truncate fs-17">
+                          <a href="#" class="text-dark"
+                            >Imported Salmon Steak
+                          </a>
+                        </h5>
+                        <p class="text-muted mb-0">
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star text-warning"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-0 ms-2">
+                      <ul class="list-inline mb-0 font-size-16">
+                        <li class="list-inline-item">
+                          <a href="#" class="text-muted px-1">
+                            <i
+                              class="mdi mdi-trash-can-outline trash-color"
+                            ></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="text-muted px-1">
+                            <i class="mdi mdi-heart-outline heart-color"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
 
-                  <input
-                    type="number"
-                    placeholder="Phone Number"
-                    style="width: 100%"
-                  />
+                  <!-- Price and Quantity section -->
+                  <div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Price</p>
+                          <h5 class="mb-0 mt-2 fs-17">
+                            <span class="text-muted me-2"
+                              ><del class="fw-normal">$180</del></span
+                            >$140
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="col-md-5 px-lg-5 px-md-5">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Quantity</p>
+                          <div class="qty">
+                            <span class="minus">-</span>
+                            <input
+                              type="number"
+                              class="count"
+                              name="qty"
+                              value="3"
+                            />
+                            <span class="plus">+</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Total</p>
+                          <h5 class="fs-17">$420</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <br />
-                <div>
-                  <label for=""><b>Date and Time For Pickup</b></label>
-                  <div
-                    style="
-                      width: 100%;
-                      display: flex;
-                      justify-content: space-between;
-                    "
+              </div>
+              <!-- end card -->
+
+              <!-- Item3 -->
+              <div class="card border shadow-none">
+                <div class="card-body">
+                  <!-- Photo and Name section -->
+                  <div class="d-flex align-items-start border-bottom pb-3">
+                    <div class="me-4">
+                      <img
+                        src="../Images/Grilled-Salmon-Sushi.jpg"
+                        alt=""
+                        class="avatar-lg rounded py-2"
+                      />
+                    </div>
+                    <div class="flex-grow-1 align-self-center overflow-hidden">
+                      <div>
+                        <h5 class="text-truncate fs-17">
+                          <a href="#" class="text-dark"
+                            >Grilled Salmon Sushi
+                          </a>
+                        </h5>
+                        <p class="text-muted mb-0">
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star text-warning"></i>
+                          <i class="bx bxs-star text-warning"></i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-0 ms-2">
+                      <ul class="list-inline mb-0 font-size-16">
+                        <li class="list-inline-item">
+                          <a href="#" class="text-muted px-1">
+                            <i
+                              class="mdi mdi-trash-can-outline trash-color"
+                            ></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="#" class="text-muted px-1">
+                            <i class="mdi mdi-heart-outline heart-color"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Price and Quantity section -->
+                  <div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Price</p>
+                          <h5 class="mb-0 mt-2 fs-17">
+                            <span class="text-muted me-2"
+                              ><del class="fw-normal">$250</del></span
+                            >$150
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="col-md-5 px-lg-5 px-md-5">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Quantity</p>
+                          <div class="qty">
+                            <span class="minus">-</span>
+                            <input
+                              type="number"
+                              class="count"
+                              name="qty"
+                              value="1"
+                            />
+                            <span class="plus">+</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="mt-3">
+                          <p class="text-muted mb-2">Total</p>
+                          <h5 class="fs-17">$150</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card -->
+
+              <!-- Buttons -->
+              <div class="row my-3">
+                <!-- Continue Shopping Button -->
+                <div class="col-sm-6">
+                  <a
+                    href="ecommerce-products.html"
+                    class="btn btn-link text-muted"
                   >
-                    <input
-                      type="text"
-                      placeholder="DD-MM-YYYY"
-                      style="width: 35%"
-                    />
-                    <input
-                      type="text"
-                      placeholder="HH : MM"
-                      style="width: 30%"
-                    />
-                    <select style="width: 25%">
-                      <option value selected>PM</option>
-                      <option value="male">AM</option>
-                    </select>
+                    <i class="mdi mdi-arrow-left me-1"></i> Continue Shopping
+                  </a>
+                </div>
+
+                <!-- Checkout button -->
+                <div class="col-sm-6">
+                  <div class="text-sm-end mt-2 mt-sm-0">
+                    <a href="checkout.html" class="btn bg-beige">
+                      <i class="mdi mdi-cart-outline me-1"></i> Checkout
+                    </a>
                   </div>
                 </div>
-                <br />
-                <div>
-                  <label for=""><b>Delivery Address</b></label>
-                  <input
-                    type="text"
-                    placeholder="Street Address"
-                    style="width: 100%"
-                  />
-                </div>
-                <br />
-                <div style="display: flex; justify-content: space-between">
-                  <input type="text" placeholder="City" style="width: 48%" />
-                  <input
-                    type="text"
-                    placeholder="Postal / Zip Code"
-                    style="width: 48%"
-                  />
-                </div>
-                <br />
-                <div>
-                  <label for=""><b>Payment Method</b></label>
-                  <div class="payment">
-                    <div>
-                      <input type="radio" name="Method" />
-                      <label for="">Cash on Delivery</label>
-                    </div>
-                    <br />
-                    <div>
-                      <input type="radio" name="Method" />
-                      <label for="">Debit or Credit Card</label>
-                    </div>
-                  </div>
-                </div>
-                <br />
-                <div>
-                  <label for=""><b>Comments</b></label>
-                  <br />
-                  <textarea
-                    name=""
-                    id=""
-                    style="width: 100%; height: 90px"
-                  ></textarea>
-                </div>
-                <br />
-                <button type="submit" style="width: 35%; height: 35px">
-                  Submit
-                </button>
-                <br />
-                <br />
-              </form>
-            </div>
-          </div>
-          <div class="sidebar">
-            <div class="inner_sidebar">
-              <h2
-                style="
-                  color: #c59d5f;
-                  font-family: 'Pinyon Script', cursive;
-                  padding: 20px;
-                "
-              >
-                Opening Hours
-              </h2>
-              <hr />
-              <h4
-                style="
-                  color: #c59d5f;
-                  font-family: 'Pinyon Script', cursive;
-                  padding: 20px;
-                "
-              >
-                Sunday - Tuesday
-              </h4>
-              <p>
-                7 am – 10 pm
-                <br />
-                (Breakfast , Lunch, Dinner)
-              </p>
-              <h4
-                style="
-                  color: #c59d5f;
-                  font-family: 'Pinyon Script', cursive;
-                  padding: 20px;
-                "
-              >
-                Wednesday - Thursday
-              </h4>
-              <p>
-                8 am – 12 am
-                <br />
-                (Breakfast , Lunch, Dinner)
-              </p>
-              <h4
-                style="
-                  color: #c59d5f;
-                  font-family: 'Pinyon Script', cursive;
-                  padding: 20px;
-                "
-              >
-                Weekends
-              </h4>
-              <p>
-                10 am – 12 am
-                <br />
-                (Breakfast , Lunch, Dinner)
-              </p>
-              <br />
+                <!-- end col -->
+              </div>
+              <!-- end row-->
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-top">
+          <p>
+            Experience the finest dining with our gourmet dishes and exceptional
+            service.
+          </p>
+        </div>
+        <div class="footer-content">
+          <div class="footer-wrapper">
+            <!-- FOOTER LEFT -->
+            <div class="footer-left">
+              <img src="../Images/image.png" alt="food ad" loading="lazy" />
+            </div>
+            <!-- FOOTER CENTER -->
+            <div class="footer-center">
+              <h3 class="footer-text">ADDRESS</h3>
+              <div class="icon-wrapper">
+                <p class="footer-paragraph">
+                  <i
+                    class="fa-solid fa-location-dot"
+                    style="color: #ffffff"
+                  ></i>
+                  732/21 Second Street, Manchester, King Street, Kingston United
+                  Kingdom
+                </p>
+              </div>
+
+              <h3 class="footer-text">FIND US ON</h3>
+              <div class="social-media">
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-facebook-f fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-twitter fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-youtube fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-vimeo-v fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+                <a href="#" class="icon-link">
+                  <i
+                    class="fa-brands fa-pinterest-p fa-2xl"
+                    style="color: #ffffff"
+                  ></i>
+                </a>
+              </div>
+            </div>
+            <!-- FOOTER RIGHT -->
+            <div class="footer-right">
+              <h3 class="footer-text">OPEN HOURS</h3>
+              <div class="icon-wrapper">
+                <p class="footer-paragraph">
+                  <i class="fa-regular fa-clock"></i>
+                  Monday – Friday<br />10 AM – 7 PM
+                </p>
+              </div>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-phone"></i>
+                <p class="footer-paragraph">+66 7883456</p>
+              </div>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-phone"></i>
+                <p class="footer-paragraph">+66 7883456</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; Copyright Team 4 | Sprints All Right Reserved.</p>
+          <div class="footer-links">
+            <a href="#">Our Chef</a>
+            <a href="#">Reservation</a>
+            <a href="#">Shop</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Script -->
+    <script src="../main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/1c758ec64d.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
