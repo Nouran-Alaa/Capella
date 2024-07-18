@@ -101,7 +101,7 @@
 }
 
 /* Media Queries*/
-@media (max-width: 768px) {
+@media (max-width: 930px) {
   .nav-links {
     display: none;
   }

@@ -1,6 +1,6 @@
 /* PARALLAX */
 .parallax {
-  background-image: url("../img/woman-eats-marshmallow-cake-with-strawberry.jpg");
+  background-image: url("../Images/woman-eats-marshmallow-cake-with-strawberry.jpg");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -29,17 +29,17 @@
 
 /* PARALLAX-2 */
 .parallax-2 {
-  background-image: url("../img/chickenDish.jpg");
+  background-image: url("../images/chickenDish.jpg");
 }
 
 /* PARALLAX-3 */
 .parallax-3 {
-  background-image: url("../img/baking-ingredients-rolling-pin-black-background.jpg");
+  background-image: url("../images/baking-ingredients-rolling-pin-black-background.jpg");
 }
 
 /* PARALLAX-4 */
 .parallax-4 {
-  background-image: url("../img/blur-background.png");
+  background-image: url("../images/blur-background.png");
   height: auto;
   justify-content: space-around;
   z-index: -1;
