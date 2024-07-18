@@ -13,7 +13,7 @@ window.addEventListener("scroll", function () {
 
     navbar.style["boxShadow"] = "2px 4px 10px rgba(0, 0, 0, 0.212)";
 
-    imagelogo.src = "../Images/logo@2x.jpeg";
+    imagelogo.src = "/Images/logo@2x.jpeg";
 
     for (let i = 0; i < burgerLine.length; i++) {
       burgerLine[i].style.backgroundColor = "black";
