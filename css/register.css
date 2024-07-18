@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background: linear-gradient(rgba(0, 0, 0, 0.299), rgba(0, 0, 0, 0.299)),
+    url("../Images/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h2 {
+  color: #333;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.footer-top span {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 25px 0;
+}
+
+.nav-links li a {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px !important;
+}
+
+::placeholder {
+  color: black;
+}
+
+.form-control,
+.form-control:focus,
+.select-border:focus {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid #000000a6;
+  padding-left: 2px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group i {
+  transform: translate3d(0, -50%, 0);
+  position: absolute;
+  top: 50%;
+  display: block;
+  right: 13px;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.imgs {
+  width: 90%;
+}
+
+.card {
+  border-radius: 0;
+}
+
+.btn-lg {
+  font-size: 16.8px;
+  font-size: 1.2rem;
+  border-radius: 0;
+  height: calc(3rem + 2px);
+}
+
+.bg-grey {
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 0;
+  transition-duration: 0.6;
+}
+
+.bg-grey:hover {
+  background-color: #333333da;
+  color: white;
+}
+
+.sign-icons {
+  color: #333;
+}
+
+.sign-icons:hover {
+  color: #333333da;
+}
+
+@media (max-width: 1199px) {
+  main {
+    background-position: right center;
+  }
+}
