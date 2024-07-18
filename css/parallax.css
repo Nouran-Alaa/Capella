@@ -1,0 +1,47 @@
+/* PARALLAX */
+.parallax {
+  background-image: url("../Images/woman-eats-marshmallow-cake-with-strawberry.jpg");
+
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PARALLAX CONTENT */
+.title {
+  z-index: 2;
+  color: white;
+  font-size: 6rem;
+  font-family: "Yellowtail", cursive;
+}
+
+.title-paragraph {
+  z-index: 2;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* PARALLAX-2 */
+.parallax-2 {
+  background-image: url("../Images/chickenDish.jpg");
+}
+
+/* PARALLAX-3 */
+.parallax-3 {
+  background-image: url("../Images/baking-ingredients-rolling-pin-black-background.jpg");
+}
+
+/* PARALLAX-4 */
+.parallax-4 {
+  background-image: url("../Images/blur-background.png");
+  height: auto;
+  justify-content: space-around;
+  z-index: -1;
+}
